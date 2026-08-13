@@ -88,4 +88,4 @@ class StatsTracker:
         self.last_points = 0
         self.last_tracks = 0
         self._total_frames  = 0
-        self._session_start = time.time()
+        self._session_start = time.time() 

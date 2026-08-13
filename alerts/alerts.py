@@ -148,4 +148,4 @@ class AlertManager:
     def reset(self):
         """Reset all tracked states (call on sensor stop/disconnect)."""
         for k in self._prev:
-            self._prev[k] = False
+            self._prev[k] = False 

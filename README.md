@@ -275,4 +275,4 @@ dl.open_in_os()   # opens CSV in Excel / LibreOffice
 ## 📜 License
 
 MIT License — see [LICENSE](LICENSE) for details.  
-Developed as a team project focused on **Industrial Safety using mmWave Radar Technology**.
+Developed as a team project focused on **Industrial Safety using mmWave Radar Technology**. 

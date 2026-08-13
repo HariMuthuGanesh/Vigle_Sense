@@ -37,4 +37,4 @@ build/
 *.egg-info/
 
 # Docs
-CHANGELOG.md
+CHANGELOG.md 

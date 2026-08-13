@@ -115,4 +115,4 @@ def auto_assign(ports: list[PortInfo]) -> tuple[Optional[int], Optional[int]]:
     log.debug("auto_assign → CLI:%s (idx %d)  Data:%s (idx %d)",
               ports[cli_idx].device,  cli_idx,
               ports[data_idx].device, data_idx)
-    return cli_idx, data_idx
+    return cli_idx, data_idx 

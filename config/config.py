@@ -90,4 +90,4 @@ sensorStart
 """
 
 # 9 m config is identical to 6 m for now
-AOP_9M_DEFAULT_CFG = AOP_6M_DEFAULT_CFG
+AOP_9M_DEFAULT_CFG = AOP_6M_DEFAULT_CFG 

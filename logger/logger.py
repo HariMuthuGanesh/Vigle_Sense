@@ -70,4 +70,4 @@ def get_logger(name: str) -> logging.Logger:
         A standard :class:`logging.Logger` instance.
     """
     _configure()
-    return logging.getLogger(name)
+    return logging.getLogger(name) 
