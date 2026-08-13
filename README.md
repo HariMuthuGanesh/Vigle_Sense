@@ -145,32 +145,38 @@ The application opens in **demo mode** immediately (animated synthetic persons v
 
 ```
 Vigil_Sense/
-├── Vigil_Sense.py         # Original unmodified application
-├── Vigil_Sense_v2.py      # Upgraded application incorporating all packages
-├── config/                # Configuration package
-│   ├── __init__.py
-│   └── config.py
-├── logger/                # Logging package
-│   ├── __init__.py
-│   └── logger.py
-├── alerts/                # Alerts package
-│   ├── __init__.py
-│   └── alerts.py
-├── data_logger/           # Data event logging package
-│   ├── __init__.py
-│   └── data_logger.py
-├── settings/              # User settings persistence package
-│   ├── __init__.py
-│   └── settings.py
-├── stats_tracker/         # Live performance tracking package
-│   ├── __init__.py
-│   └── stats_tracker.py
-└── port_utils/            # Serial port utilities package
-    ├── __init__.py
-    └── port_utils.py
-├── requirements.txt       # Python dependencies
-├── CHANGELOG.md           # Version history
-└── README.md              # This file
+├── src/                       # Consolidated package modules
+│   ├── config/                # Configuration package
+│   │   ├── __init__.py
+│   │   └── config.py
+│   ├── logger/                # Logging package
+│   │   ├── __init__.py
+│   │   └── logger.py
+│   ├── alerts/                # Alerts package
+│   │   ├── __init__.py
+│   │   └── alerts.py
+│   ├── data_logger/           # Data event logging package
+│   │   ├── __init__.py
+│   │   └── data_logger.py
+│   ├── settings/              # User settings persistence package
+│   │   ├── __init__.py
+│   │   └── settings.py
+│   ├── stats_tracker/         # Live performance tracking package
+│   │   ├── __init__.py
+│   │   └── stats_tracker.py
+│   └── port_utils/            # Serial port utilities package
+│       ├── __init__.py
+│       └── port_utils.py
+├── data/                      # CSV session data export directory
+│   └── session_*.csv
+├── logs/                      # Application log file output directory
+│   └── vigil_sense.log
+├── Vigil_Sense.py             # Original standalone application entry point
+├── Vigil_Sense_v2.py          # Main integrated application entry point
+├── settings.json              # Persistent user settings
+├── requirements.txt           # Python dependencies
+├── CHANGELOG.md               # Version history
+└── README.md                  # Project documentation
 ```
 
 ---

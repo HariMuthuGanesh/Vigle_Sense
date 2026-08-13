@@ -1,6 +1,12 @@
 # ── Vigil_Sense v2 — integrated with companion modules ───────────
 import sys, os, time, struct, threading, math, platform
 import numpy as np
+
+# Ensure `src/` packages are on Python import path
+_src_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src")
+if _src_dir not in sys.path:
+    sys.path.insert(0, _src_dir)
+
 import serial
 import serial.tools.list_ports
 from collections import deque

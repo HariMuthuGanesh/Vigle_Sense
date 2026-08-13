@@ -12,11 +12,17 @@ from logging.handlers import RotatingFileHandler
 # Log file path resolution - resolves to project root when nested
 _my_dir = os.path.dirname(os.path.abspath(__file__))
 if os.path.basename(_my_dir) == "logger":
-    _root_dir = os.path.dirname(_my_dir)
+    _parent = os.path.dirname(_my_dir)
+    if os.path.basename(_parent) == "src":
+        _root_dir = os.path.dirname(_parent)
+    else:
+        _root_dir = _parent
 else:
     _root_dir = _my_dir
 
-_LOG_FILE    = os.path.join(_root_dir, "vigil_sense.log")
+_logs_dir = os.path.join(_root_dir, "logs")
+os.makedirs(_logs_dir, exist_ok=True)
+_LOG_FILE    = os.path.join(_logs_dir, "vigil_sense.log")
 _MAX_BYTES   = 5 * 1024 * 1024   # 5 MB per log file
 _BACKUP_COUNT = 3                 # keep up to 3 rotated files
 

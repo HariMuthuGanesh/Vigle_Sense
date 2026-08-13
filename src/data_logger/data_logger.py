@@ -42,10 +42,16 @@ class DataLogger:
         if output_dir is None:
             my_dir = os.path.dirname(os.path.abspath(__file__))
             if os.path.basename(my_dir) == "data_logger":
-                output_dir = os.path.dirname(my_dir)
+                parent = os.path.dirname(my_dir)
+                if os.path.basename(parent) == "src":
+                    root_dir = os.path.dirname(parent)
+                else:
+                    root_dir = parent
             else:
-                output_dir = my_dir
+                root_dir = my_dir
+            output_dir = os.path.join(root_dir, "data")
 
+        os.makedirs(output_dir, exist_ok=True)
         ts = time.strftime("%Y%m%d_%H%M%S")
         self.filepath = os.path.join(output_dir, f"session_{ts}.csv")
         self._file   = None

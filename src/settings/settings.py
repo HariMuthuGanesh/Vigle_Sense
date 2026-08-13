@@ -13,7 +13,11 @@ log = get_logger(__name__)
 # Settings file path resolution - resolves to project root when nested
 _my_dir = os.path.dirname(os.path.abspath(__file__))
 if os.path.basename(_my_dir) == "settings":
-    _root_dir = os.path.dirname(_my_dir)
+    _parent = os.path.dirname(_my_dir)
+    if os.path.basename(_parent) == "src":
+        _root_dir = os.path.dirname(_parent)
+    else:
+        _root_dir = _parent
 else:
     _root_dir = _my_dir
 
